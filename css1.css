@@ -1,0 +1,125 @@
+:root{
+    --letra: orange;
+    --letra2: rgb(171, 171, 171);
+    --fondo1: rgb(42, 42, 42);
+    --fondo2: rgb(32, 32, 32);
+    --fondo3: rgba(180, 123, 10, 0.122);
+    --sombra: black;
+    --texto: rgb(255, 255, 255);
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: auto !important;
+    background: var(--fondo1);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    max-width: 360px;
+    padding: 30px;
+    border: none;
+    color: var(--letra);
+    margin: 60px;
+    background: var(--fondo2);
+    border-radius: 10px;
+    box-shadow: 0px 0px 30px 1px var(--sombra);
+}
+
+select{
+    display: flex;
+    background: var(--letra);
+    padding: 10px;
+    width: 360px;
+    font-size: 15px;
+    margin-right: 20px;
+    translate: 0px 8px;
+    font-size: 16px;
+    outline: none;
+    border-radius: 4px;
+}
+input{
+    margin-top: 15¿2px;
+    width:auto;
+    font-size: 18px;
+    color: var(--letra2);
+    padding: 9px;
+    border: none;
+    outline: none;
+    background: var(--fondo3);
+    border-left: 3px solid var(--letra);
+    border-radius: 3px;
+    transition: all 0.5s ease-in-out;
+}
+label{
+    margin-top: 19px;
+    color: var(--letra2);
+    font-size: 20px;
+}
+h1{
+    color: var(--letra);
+    font-size: 34px;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--letra);
+    text-shadow: 0px 0px 10px var(--letra);
+}
+h2{
+    text-shadow: 0px 0px 10px var(--letra);
+    margin-top: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--letra);
+}
+.linea{
+    margin-top: 30px;
+    border-top: 1px solid var(--letra);
+}
+.boton1{
+    display: flex;
+    justify-content: center;
+}
+.boton{
+    width: 170px;
+    padding:15px;
+    font-size: 20px;
+    margin-top: 30px;
+    background: var(--letra);
+    color: var(--texto);
+    transition: all 0.5s ease-in-out;
+}
+
+/* Sombras y Efectos */
+.boton:hover{
+    cursor: pointer;
+    text-shadow: 0px 0px 4px var(--texto);
+    transition: all 0.5s ease-in-out;
+    box-shadow: 0px 0px 10px var(--letra);
+}
+input:focus{
+    outline: none;
+    box-shadow: 0px 0px 6px var(--letra);
+}
+
+
+
+/* Responsive */
+
+@media screen and (max-width: 600px) {
+    form{
+        max-width: 280px;
+    }
+    input, select{
+        width: 100%;
+    }
+    .boton{
+        width: 100%;
+    }
+}
